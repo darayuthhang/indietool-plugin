@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "indietool": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@indietool/mcp-server"
+      ],
+      "env": {
+        "INDIETOOL_API_KEY": "${INDIETOOL_API_KEY}"
+      }
+    }
+  }
+}

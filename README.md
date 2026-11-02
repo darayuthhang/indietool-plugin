@@ -22,7 +22,19 @@ agy plugin install git+https://github.com/darayuthhang/indietool-plugin.git
 
 ---
 
-### 2. 🟣 Anthropic Claude Code (Terminal)
+### 2. 🟢 OpenAI Codex CLI (Terminal)
+Install directly from this GitHub repository into OpenAI Codex:
+```bash
+# Register this repository as a marketplace source
+codex plugin marketplace add darayuthhang/indietool-plugin
+
+# Install the plugin
+codex plugin install indietool-plugin@indietool-marketplace
+```
+
+---
+
+### 3. 🟣 Anthropic Claude Code (Terminal)
 Add the published npm package directly to your Claude Code environment:
 ```bash
 claude mcp add indietool npx -y @indietool/mcp-server
@@ -30,7 +42,7 @@ claude mcp add indietool npx -y @indietool/mcp-server
 
 ---
 
-### 3. 💻 Cursor IDE / Windsurf
+### 4. 💻 Cursor IDE / Windsurf
 In **Cursor**:
 1. Open **Settings** → **Features** → **MCP**.
 2. Click **+ Add New MCP Server**:
@@ -44,7 +56,7 @@ Open **Settings** → **Cascade** → **MCP Servers** and add the configuration 
 
 ---
 
-### 4. 🟣 Claude Desktop
+### 5. 🟣 Claude Desktop
 Add this to your Claude Desktop configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
@@ -65,7 +77,7 @@ Add this to your Claude Desktop configuration file:
 
 ---
 
-### 5. 🟢 ChatGPT & Cloud Agents (Hosted Remote MCP)
+### 6. 🟢 ChatGPT & Cloud Agents (Hosted Remote MCP)
 For cloud assistants that cannot run local commands (like ChatGPT Web/Mobile or remote workflows), connect directly to our hosted endpoint:
 * **Connector URL:** `https://www.indietool.io/api/mcp`
 * **Transport:** Streamable HTTP / SSE

@@ -1,5 +1,6 @@
 {
-  "name": "indietool",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "indietool-plugin",
   "displayName": "IndieTool",
   "version": "1.0.0",
   "description": "Discover 1,500+ indie apps, submit startups with permanent DR 47+ backlinks, and check submission credits via IndieTool.",

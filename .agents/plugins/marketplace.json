@@ -1,0 +1,20 @@
+{
+  "name": "indietool-marketplace",
+  "interface": {
+    "displayName": "IndieTool Plugins"
+  },
+  "plugins": [
+    {
+      "name": "indietool-plugin",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "indietool-plugin",
+  "version": "1.0.0",
+  "description": "IndieTool workflows and utilities: submit startups with DR 47+ backlinks and search 1,500+ indie tools.",
+  "repository": "https://github.com/darayuthhang/indietool-plugin",
+  "license": "MIT"
+}
