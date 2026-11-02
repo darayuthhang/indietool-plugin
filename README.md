@@ -65,7 +65,13 @@ Add this to your Claude Desktop configuration file:
 
 ---
 
-## 🔑 Authentication & Credits
+### 5. 🟢 ChatGPT & Cloud Agents (Hosted Remote MCP)
+For cloud assistants that cannot run local commands (like ChatGPT Web/Mobile or remote workflows), connect directly to our hosted endpoint:
+* **Connector URL:** `https://www.indietool.io/api/mcp`
+* **Transport:** Streamable HTTP / SSE
+* **Setup in ChatGPT:** Open **Settings** → **Connectors** (or Apps) → **Advanced** → turn on **Developer mode** → Add Custom Connector with `https://www.indietool.io/api/mcp`.
+
+---
 
 1. **Get your API Key**:
    Copy your API key from [https://www.indietool.io/indietool/api-keys](https://www.indietool.io/indietool/api-keys).
