@@ -1,0 +1,18 @@
+{
+  "name": "indietool",
+  "displayName": "IndieTool",
+  "version": "1.0.0",
+  "description": "Discover 1,500+ indie apps, submit startups with permanent DR 47+ backlinks, and check submission credits via IndieTool.",
+  "author": {
+    "name": "IndieTool",
+    "url": "https://www.indietool.io"
+  },
+  "homepage": "https://www.indietool.io",
+  "repository": "https://github.com/darayuthhang/indietool-plugin",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Check how many IndieTool submission credits I have remaining",
+    "Submit my startup to IndieTool with a permanent backlink",
+    "Search IndieTool for developer tools and AI alternatives"
+  ]
+}
