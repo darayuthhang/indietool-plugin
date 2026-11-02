@@ -1,68 +1,94 @@
-# IndieTool Antigravity Plugin 🚀
+# IndieTool Universal MCP Server & Plugin 🚀
 
-The official [IndieTool](https://www.indietool.io) plugin for Google Antigravity and Gemini agents.
+The official [IndieTool](https://www.indietool.io) Model Context Protocol (MCP) server and plugin for **Claude Desktop**, **Cursor IDE**, **ChatGPT**, **Grok**, and **Google Antigravity**.
 
 Allows AI agents to:
-- 💳 **Check Submission Credits**: Check available credits in real-time.
-- 🚀 **Submit Startups & Apps**: Deduct 1 credit and launch live with a permanent DR 47+ do-follow backlink.
-- 🔍 **Search Indie Tools**: Query 1,500+ curated indie apps, SaaS alternatives, and startups.
-- 🏆 **Featured Launches**: Retrieve today's top curated launches and winners.
-- 📂 **Categories**: Browse all official software categories.
+- 🚀 **Submit Startups with Backlinks**: Submit apps directly from chat to get a permanent DR 47+ do-follow backlink.
+- 💳 **Check Submission Credits**: Verify available submission credits in real-time.
+- 🔍 **Search 1,500+ Indie Tools**: Find curated SaaS apps, AI tools, competitor alternatives, and founder products.
+- 🏆 **Daily Launch Winners**: Surface today's top featured startups and products.
+- 📂 **Official Categories**: Explore standard software and startup categories.
 
 ---
 
-## 📦 Installation
+## ⚡ Quick Start: Connect to Your Favorite AI
 
-### Option 1: One-Click Marketplace Card
-If installed via the Google Agent Marketplace:
-```html
-<plugin-card catalog-id="indietool"></plugin-card>
+### 1. 🟣 Claude Desktop
+Add this to your Claude configuration file:
+* **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+* **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "indietool": {
+      "command": "npx",
+      "args": ["-y", "@indietool/mcp-server"],
+      "env": {
+        "INDIETOOL_API_KEY": "it_live_your_api_key_here"
+      }
+    }
+  }
+}
 ```
 
-### Option 2: CLI Git Install
-Install directly from GitHub:
+---
+
+### 2. 💻 Cursor IDE / Windsurf
+In **Cursor**:
+1. Open **Settings** → **Features** → **MCP**.
+2. Click **+ Add New MCP Server**.
+3. Fill in:
+   * **Name:** `indietool`
+   * **Type:** `command`
+   * **Command:** `npx -y @indietool/mcp-server`
+   * **Environment Variables:** `INDIETOOL_API_KEY=it_live_your_api_key_here`
+
+In **Windsurf**:
+Open **Settings** → **Cascade** → **MCP Servers** and add the configuration above.
+
+---
+
+### 3. 🔵 Google Antigravity & Gemini Agents
+Install directly via the Antigravity CLI:
 ```bash
 agy plugin install git+https://github.com/darayuthhang/indietool-plugin.git
 ```
+Or add the plugin directly to your workspace under `.agents/plugins/indietool`.
 
-### Option 3: Workspace Staging
-Clone or copy this folder into your project's `.agents/plugins/indietool` directory:
+---
+
+### 4. 🟢 ChatGPT & Grok (Agents / MCP Clients)
+For OpenAI / Grok agent frameworks and MCP-compatible chat interfaces, run via `npx`:
 ```bash
-git clone https://github.com/darayuthhang/indietool-plugin.git .agents/plugins/indietool
+npx -y @indietool/mcp-server
 ```
+Pass `INDIETOOL_API_KEY` as an environment variable or header token.
 
 ---
 
-## 🔑 Authentication
+## 🔑 Authentication & Credits
 
-To use tools that interact with your account (like checking credits or submitting startups):
-
-1. **Obtain an API Key**:
-   Create or copy your API key from [https://www.indietool.io/indietool/api-keys](https://www.indietool.io/indietool/api-keys).
-
-2. **Set Environment Variable**:
-   Set `INDIETOOL_API_KEY` in your terminal shell or environment:
-   ```bash
-   export INDIETOOL_API_KEY="it_live_your_key_here"
-   ```
+1. **Get your API Key**:
+   Copy your API key from [https://www.indietool.io/indietool/api-keys](https://www.indietool.io/indietool/api-keys).
+2. **Submission Credits**:
+   * Searching tools, listing categories, and checking featured startups are **100% free** and require no credits.
+   * Submitting a startup deducts **1 credit** (or unlimited if you hold an IndieTool Lifetime Pass). Purchase credits at [indietool.io/pricing](https://www.indietool.io/pricing).
 
 ---
 
-## 🛠️ Included Components
+## 🛠️ Available MCP Tools
 
-### MCP Server (`mcp_config.json`)
-Exposes the `@indietool/mcp-server` running via `npx` with:
-- `check_credits`
-- `submit_startup`
-- `search_tools`
-- `get_featured_startups`
-- `list_categories`
+| Tool | Description | Requires Credits? |
+| :--- | :--- | :--- |
+| `submit_startup` | Submits an app to IndieTool with a permanent DR 47+ backlink. | **Yes** (1 credit) |
+| `check_credits` | Checks remaining submission credits balance in real-time. | No |
+| `search_tools` | Queries 1,500+ curated products by keyword or category. | No |
+| `get_featured_startups`| Retrieves today's top featured launches and winners. | No |
+| `list_categories` | Lists all official startup categories. | No |
 
-### Skills (`skills/`)
-- `search-indietool`: Guides the agent to query tools, compare software, and surface daily launch winners.
-- `submit-startup`: Enforces credit verification checks before submitting apps to prevent failed launches.
+---
 
-### Rules (`rules/AGENTS.md`)
-- Enforces credit verification prior to launching.
-- Ensures accurate URLs and official category mappings.
-- Forbids logging or exposing secret API keys.
+## 📄 License
+
+MIT © [IndieTool](https://www.indietool.io)
