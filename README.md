@@ -1,8 +1,8 @@
 # IndieTool Universal MCP Server & Plugin 🚀
 
-The official [IndieTool](https://www.indietool.io) Model Context Protocol (MCP) server and agent plugin for **Google Antigravity**, **xAI Grok Build**, **OpenAI Codex**, **Claude Code**, and **Cursor IDE**.
+The official [IndieTool](https://www.indietool.io) Model Context Protocol (MCP) server and plugin for AI agents and coding assistants including **Claude**, **Cursor**, **Google Antigravity**, and **Windsurf**.
 
-Allows AI coding assistants and agents to:
+Allows AI agents to:
 - 🚀 **Submit Startups with Backlinks**: Submit apps directly from chat to get a permanent DR 47+ do-follow backlink.
 - 💳 **Check Submission Credits**: Verify available submission credits in real-time.
 - 🔍 **Search 1,500+ Indie Tools**: Find curated SaaS apps, AI tools, competitor alternatives, and founder products.
@@ -11,44 +11,26 @@ Allows AI coding assistants and agents to:
 
 ---
 
-## ⚡ Quick Start: Install in Terminal AI Agents
+## ⚡ Quick Start: Connect to Your AI
 
-Install IndieTool into your terminal agent with a single command:
-
-### 🔵 Google Antigravity (`agy`)
+### 1. 🔵 Google Antigravity & Gemini Agents
+Install directly from this GitHub repository into Antigravity:
 ```bash
 agy plugin install git+https://github.com/darayuthhang/indietool-plugin.git
 ```
-*(Or in the Antigravity TUI, type `/plugin` to manage).*
+*(Or clone this folder into your workspace at `.agents/plugins/indietool`).*
 
 ---
 
-### 🔴 xAI Grok Build (`grok`)
-```bash
-grok plugin install indietool --trust
-```
-*(Or inside the interactive Grok Build terminal, type `/marketplace` or `/mcps`).*
-
----
-
-### 🟢 OpenAI Codex CLI (`codex`)
-```bash
-codex plugin marketplace add darayuthhang/indietool-plugin --ref main
-```
-*(Or inside the interactive Codex terminal, type `/plugins`).*
-
----
-
-### 🟣 Anthropic Claude Code (`claude`)
+### 2. 🟣 Anthropic Claude Code (Terminal)
+Add the published npm package directly to your Claude Code environment:
 ```bash
 claude mcp add indietool npx -y @indietool/mcp-server
 ```
 
 ---
 
-## 💻 Install in AI Editors & Desktop Apps
-
-### 1. Cursor IDE & Windsurf
+### 3. 💻 Cursor IDE / Windsurf
 In **Cursor**:
 1. Open **Settings** → **Features** → **MCP**.
 2. Click **+ Add New MCP Server**:
@@ -62,8 +44,8 @@ Open **Settings** → **Cascade** → **MCP Servers** and add the configuration 
 
 ---
 
-### 2. Claude Desktop
-Add this to your Claude configuration file:
+### 4. 🟣 Claude Desktop
+Add this to your Claude Desktop configuration file:
 * **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 * **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
